@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 public class ReportingProblemWithParallelExecution {
 
     /*
-    * Since we are going to created only one report for all the test execution irrespective of the number of browsers
+    * Since we are going to create only one report for all the test execution irrespective of the number of browsers.
     * Variables for 'ExtentHtmlReporter' & 'ExtentReports' should be static as they would be shared among threads for there
     * own test / node logging. 'ExtentTest' & 'WebDriver' variable shouldn't be static as this would cause issues.
     *
@@ -25,10 +25,12 @@ public class ReportingProblemWithParallelExecution {
     * keeping below variables (test & node) static would cause anomaly in test logging in report
     * keeping 'driver' as static would create issue in test execution on browsers
     *
+    * defaulted the below variable as static to show the issue, remove static to see the solution
+    *
     **/
-    private ExtentTest test;//
-    private ExtentTest node;
-    private WebDriver driver;
+    private static ExtentTest test;//
+    private static ExtentTest node;
+    private static WebDriver driver;
 
     @BeforeSuite
     public void setupReport() {
