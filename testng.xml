@@ -4,7 +4,7 @@
     <test name="chrome">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="example.ReportingSolution">
+            <class name="example.ReportingProblemWithParallelExecution">
             </class>
         </classes>
     </test>
@@ -12,7 +12,7 @@
    <test name="safari">
         <parameter name="browser" value="safari"/>
         <classes>
-            <class name="example.ReportingSolution">
+            <class name="example.ReportingProblemWithParallelExecution">
             </class>
         </classes>
     </test>
