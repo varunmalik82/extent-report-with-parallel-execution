@@ -1,16 +1,16 @@
 ### System Requirement
-- Safari & ChromeDriver should be installed on your machine, if not please update the test for browsers present on your machine
+- Safari & ChromeDriver should be installed on your machine, if not please update the test for the browsers present on your machine
 
 ### Tests
-- This solution contain 2 tests
+- This solution contains 2 tests
 - 'ReportingProblemWithParallelExecution' is created to show the issue caused due to unawareness of the role of static variable
-in test creating for a threaded solution
+in test creation for a threaded solution
 -  'ReportingSolution' is another test created keeping the correct variable usage for a threaded application
 
-### how to run the tests
-- update the Testng.xml for one the above test you are planning to run
+### How to run the tests
+- Update the Testng.xml for one the above test you are planning to run
 
-### Notes
+### Notes -
 
 `Static variable is a shared resource`
 - which can be used to exchange some information among different threads.
