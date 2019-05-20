@@ -26,6 +26,7 @@ public class ReportingProblemWithParallelExecution {
     * keeping 'driver' as static would create issue in test execution on browsers
     *
     * defaulted the below variable as static to show the issue, remove static to see the solution
+    * or replace static declaration with volatile
     *
     **/
     private static ExtentTest test;//

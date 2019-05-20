@@ -14,9 +14,9 @@ import reportManager.ExtentTestManager;
 
 
 public class ReportingSolution {
-    WebDriver driver;
-    ExtentTest test;
-    ExtentTest node;
+    volatile WebDriver driver;
+    volatile ExtentTest test;
+    volatile ExtentTest node;
 
     @BeforeClass
     @Parameters("browser")
@@ -83,10 +83,7 @@ public class ReportingSolution {
 
     public void table(int num, ExtentTest node) {
         for (int i = 1; i <= 10; i++) {
-            synchronized (this) {
-                node.info(num + " * " + i + " = " + String.valueOf(num * i));
-            }
-
+            node.info(num + " * " + i + " = " + String.valueOf(num * i));
         }
     }
 }

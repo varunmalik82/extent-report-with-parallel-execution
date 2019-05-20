@@ -2,17 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="tests">
     <test name="chrome">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="example.ReportingProblemWithParallelExecution">
-            </class>
-        </classes>
-    </test>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="example.ReportingSolution">
+        </class>
+    </classes>
+</test>
 
    <test name="safari">
         <parameter name="browser" value="safari"/>
         <classes>
-            <class name="example.ReportingProblemWithParallelExecution">
+            <class name="example.ReportingSolution">
             </class>
         </classes>
     </test>
