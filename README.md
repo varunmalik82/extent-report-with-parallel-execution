@@ -12,6 +12,10 @@ in test creation for a threaded solution
 
 ### Notes -
 
+Try not to use non final static variables within your tests if you run your tests in parallel. If you really have to use static variables that are not defined as final make sure to wrap them in InheritableThreadLocal objects. In this way they will be static within the current thread and child threads (i.e. the current test).
+
+Also before configuring to run your tests in parallel check that your website allows it. For example problems could occur when logging in with the same user at the same time (if your website supports a login functionality). There could also be other reasons not to run tests in parallel.
+
 `Static variable is a shared resource`
 - which can be used to exchange some information among different threads.
 And we need to be careful while accessing such a shared resource. Hence, we need to make sure that the access to static variables in multi-threaded environment is synchronized.
